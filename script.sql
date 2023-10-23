@@ -1,3 +1,13 @@
+/* A new restaurant, Bytes of China, has just moved to a busy street in Chinatown from a previous location. Bytes of China has hired you to design its database schema so that it can display its menu on its new website, It has provided you with a copy of its current menu.
+
+As a database designer, you get to design a database schema and perform the following tasks:
+create tables
+define relationships between tables
+designate appropriate columns as keys
+insert sample data and
+make queries from the database
+*/
+
 CREATE TABLE restaurant (
     id integer PRIMARY KEY UNIQUE,
     name varchar(21),
