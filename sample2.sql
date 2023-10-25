@@ -76,9 +76,8 @@ ADD CHECK (price_usd/quantity > 0.02 AND price_usd/quantity < 25.00);
 ALTER TABLE parts
 ADD PRIMARY KEY (id);
 
-/*ALTER TABLE reorder_options
-ADD FOREIGN KEY (id) REFERENCES parts(id);
-*/
+ALTER TABLE reorder_options
+ADD FOREIGN KEY (part_id) REFERENCES parts(id);
 
 ALTER TABLE locations
 ADD CHECK (qty > 0);
@@ -90,10 +89,10 @@ ALTER TABLE locations
 ADD FOREIGN KEY (part_id) REFERENCES parts (id);
 
 ALTER TABLE parts
-ADD FOREIGN KEY (manufacturers_id) REFERENCES manufacturers (id);
+ADD FOREIGN KEY (manufacturer_id) REFERENCES manufacturers (id);
 
-INSERT INTO manufacturers(name, id) 
-VALUES ('Pip-NNC Industrial', 11);
+INSERT INTO manufacturers(name, id)
+VALUES ('Pip -NNC Industrial', 11);
 
 UPDATE parts
 SET manufacturer_id = 11
