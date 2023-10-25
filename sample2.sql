@@ -92,8 +92,8 @@ ADD FOREIGN KEY (part_id) REFERENCES parts (id);
 ALTER TABLE parts
 ADD FOREIGN KEY (manufacturers_id) REFERENCES manufacturers (id);
 
-INSERT INTO manufacturers(name, id)
-VALUES ('Pip -NNC', 11);
+INSERT INTO manufacturers(name, id) 
+VALUES ('Pip-NNC Industrial', 11);
 
 UPDATE parts
 SET manufacturer_id = 11
